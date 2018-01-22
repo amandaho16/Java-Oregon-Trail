@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Meet our travelers!</h1>
+	name: {{myTraveler1.name}}
+	<br>
+	amount of food: {{myTraveler1.amountFood}}
+	<br>
+	is the traveler healthy:  {{myTraveler1.isHealthy}}
+	<br>
+	<br>
+	name: {{myTraveler2.name}}
+	<br>
+	amount of food: {{myTraveler2.amountFood}}
+	<br>
+	is the traveler healthy:  {{myTraveler2.isHealthy}}
+	<br>
+	<br>
+	<br>
+	<br>
+	{{^hunt}}
+		<form action="/hunt" method="post">
+			<button>Make the travelers hunt</button>
+		</form>
+	{{/hunt}}
+	{{^eat}}
+		<form action="/eat" method="post">
+			<button>Make the travelers eat</button>
+		</form>
+	{{/eat}}
+	{{^reset}}
+	<form action="/reset" method="post">
+		<button>Reset Game</button>
+	</form>
+	{{/reset}}
+	
+	
+</body>
+</html>
